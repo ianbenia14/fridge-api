@@ -1,7 +1,6 @@
 package dev.java10x.Fridge.model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,13 +10,14 @@ public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     private Integer quantity;
+
     private LocalDateTime expirationDate;
 
-    public Food() {
-
-    }
+    public Food() {}
 
     public Food(Long id, String name, Integer quantity, LocalDateTime expirationDate) {
         this.id = id;
